@@ -54,13 +54,14 @@ export default function App() {
             ← กลับไปเลือกหมวดหมู่
           </Button>
           <h2 className="text-2xl font-bold mb-4">แนะนำหมวด: {selectedCategory}</h2>
-          <div className="grid gap-3">
+          <div className="grid gap-4">
             {recommendations[selectedCategory].map((title, index) => (
-              <Card key={index} className="shadow-md">
-                <CardContent className="p-4 text-lg font-medium">
-                  {title}
-                </CardContent>
-              </Card>
+              <div
+                key={index}
+                className="p-6 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md shadow-lg text-gray-900 text-lg font-medium"
+              >
+                {title}
+              </div>
             ))}
           </div>
         </motion.div>
